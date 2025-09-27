@@ -1,15 +1,13 @@
+import Discount from "@/components/ui/Discount";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import NavBar from "@/components/ui/NavBar";
 import "./globals.css";
+import { Inter } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,10 +21,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={inter.className}>
+      {/* <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+        rel="stylesheet"
+      /> */}
+
+      <body>
+        <Discount />
+        <NavBar />
+        {/* <div className="h-[200vh] bg-amber-300">check sticky element</div> */}
         {children}
       </body>
     </html>
