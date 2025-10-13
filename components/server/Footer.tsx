@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SelectLanguage from "../client/SelectLanguage";
 
 function Footer() {
@@ -11,6 +12,9 @@ function Footer() {
         <p className="text-xs font-light">
           © 2025, Shaba Closet Designed by Kinfolks
         </p>
+        <Link href="/privacy-policy">
+          <p className="text-xs font-light hover:underline">Privacy policy</p>
+        </Link>
       </div>
     </div>
   );
