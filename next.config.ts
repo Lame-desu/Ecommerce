@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         hostname: "cdn.dummyjson.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        pathname: "**",
+      },
       new URL("https://images.unsplash.com/**"),
     ],
     minimumCacheTTL: 60,

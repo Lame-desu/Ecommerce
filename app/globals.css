@@ -140,3 +140,18 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
+
+@theme {
+  --breakpoint-md: 790px;
+}
+
+/* Remove number input arrows for all browsers */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}

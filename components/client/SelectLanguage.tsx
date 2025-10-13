@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { IoCheckmark, IoChevronDown } from "react-icons/io5";
+import { IoCheckmark, IoChevronDown, IoChevronUp } from "react-icons/io5";
 
-function SelectLanguage() {
+function SelectLanguage({ border }: { border?: boolean }) {
   const [isSelectingLanguage, setIsSelectingLanguage] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
 
@@ -19,23 +19,39 @@ function SelectLanguage() {
     return () => window.removeEventListener("click", removeLanguageSelect);
   }, [isSelectingLanguage]);
   return (
-    <div className="relative hidden lg:block">
+    <div className="relative">
       <button
         onClick={(e) => {
           setIsSelectingLanguage(!isSelectingLanguage);
           e.stopPropagation();
         }}
-        className="flex items-center gap-1 text-sm hover:underline hover:cursor-pointer"
+        className={`flex items-center gap-1 text-sm hover:underline hover:cursor-pointer ${
+          border
+            ? "py-3 px-4 tracking-wider border-1 rounded-sm border-gray-500"
+            : ""
+        }`}
       >
         {selectedLanguage === "English" ? selectedLanguage : "አማረኛ"}{" "}
         <span>
-          <IoChevronDown />
+          {isSelectingLanguage ? (
+            border ? (
+              <IoChevronDown />
+            ) : (
+              <IoChevronUp />
+            )
+          ) : border ? (
+            <IoChevronUp />
+          ) : (
+            <IoChevronDown />
+          )}
         </span>
       </button>
       {isSelectingLanguage && (
         <div
           onClick={(e) => e.stopPropagation()}
-          className="absolute top-[140%] right-0 border-[1px] border-black p-6  pr-9 text-sm rounded-sm z-10 bg-white"
+          className={`absolute ${
+            border ? "bottom-[120%] left-0" : "top-[120%] right-0"
+          }  border-[1px] border-black p-6  pr-9 text-sm rounded-sm z-10 bg-white`}
         >
           <div
             onClick={() => {
