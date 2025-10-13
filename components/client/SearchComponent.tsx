@@ -2,7 +2,6 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineCancel } from "react-icons/md";
-import CircularLoading from "../server/CircularLoading";
 import ShowSearchResult from "./ShowSearchResult";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";

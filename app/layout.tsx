@@ -1,6 +1,4 @@
-import Discount from "@/components/server/Discount";
 import type { Metadata } from "next";
-import NavBar from "@/components/client/NavBar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import SocialLinks from "@/components/server/SocialLinks";
