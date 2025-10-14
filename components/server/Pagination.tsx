@@ -47,7 +47,7 @@ function Pagination({
   );
   const href = slug ? `/category/${slug}?` : `/search?q=${query}&`;
   return (
-    <div className="flex justify-center items-center gap-8 mb-14">
+    <div className="flex justify-center items-center gap-2 md:gap-8 mb-14">
       {currentIndx !== 1 && (
         <Link
           href={`${href}skip=${skip ? skip - interval : 0}`}
