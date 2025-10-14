@@ -215,7 +215,7 @@ function OrderDialog() {
                 <h2 className="font-extrabold min-w-28 ">
                   ሰፈር/Address<span className="text-red-500">*</span>
                 </h2>
-                <div className="flex-1 flex items-center">
+                <div className="flex flex-1 items-center">
                   <div className="rounded-l-sm self-stretch flex items-center justify-center px-3 py-3 border-[1px] border-r-0 border-gray-400">
                     <FaRegAddressBook />
                   </div>
@@ -237,13 +237,13 @@ function OrderDialog() {
                 <h2 className="font-extrabold max-w-28 ">
                   የቅናሽ ኮድ/Discount Code
                 </h2>
-                <div className="flex-1 flex items-stretch gap-0.5">
+                <div className="flex flex-wrap flex-1 items-stretch gap-0.5">
                   <input
                     type="text"
                     placeholder="Discount Code"
-                    className="px-3 py-3 rounded-sm outline-none border-[1px] border-gray-400 focus:shadow-[0px_0px_0_2px_#a0e4f7]"
+                    className="px-3 min-w-36 w-full py-3 rounded-sm outline-none border-[1px] border-gray-400 focus:shadow-[0px_0px_0_2px_#a0e4f7]"
                   />
-                  <button className="text-xl text-center py-2 flex-1 bg-black text-white rounded-sm">
+                  <button className="text-xs text-center py-2 px-2 bg-black text-white rounded-sm">
                     Apply
                   </button>
                 </div>
