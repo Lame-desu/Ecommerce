@@ -5,11 +5,9 @@ import Link from "next/link";
 function ShowCategoriesList({
   categories,
   route,
-  setOpen,
 }: {
   categories: Array<{ name: string; slug: string; url: string }>;
   route: string | undefined;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const noSpaceRoute: string | undefined = route?.split("%20").join("");
   return (
@@ -20,7 +18,6 @@ function ShowCategoriesList({
             route === "" ? "bg-[#efefef]" : ""
           } space-y-0.5 text-lg cursor-pointer transition-transform delay-300`}
           href="/"
-          onClick={() => setOpen(false)}
         >
           Home
         </Link>
@@ -34,7 +31,6 @@ function ShowCategoriesList({
                 : ""
             } space-y-0.5 text-lg cursor-pointer transition-transform delay-300`}
             href={`/category/${category.name.toLowerCase()}`}
-            onClick={() => setOpen(false)}
           >
             {category.name}
           </Link>
@@ -46,7 +42,6 @@ function ShowCategoriesList({
             route === "" ? "bg-[#efefef]" : ""
           } space-y-0.5 text-lg cursor-pointer transition-transform delay-300`}
           href="/privacy-policy"
-          onClick={() => setOpen(false)}
         >
           Privacy policy
         </Link>
@@ -57,7 +52,6 @@ function ShowCategoriesList({
             route === "" ? "bg-[#efefef]" : ""
           } space-y-0.5 text-lg cursor-pointer transition-transform delay-300`}
           href="/terms"
-          onClick={() => setOpen(false)}
         >
           Terms of service
         </Link>

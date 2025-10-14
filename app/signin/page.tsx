@@ -7,8 +7,10 @@ import { IoClose } from "react-icons/io5";
 const SIGNIN_ERROR_URL = "/error";
 
 export default async function SignInPage(props: {
-  searchParams: { callbackUrl: string | undefined };
+  searchParams: Promise<{ callbackUrl: string | undefined }>;
 }) {
+  const searchParams = await props.searchParams;
+
   return (
     <main className="fixed inset-0 flex z-[800] flex-col items-center justify-center bg-white text-black px-4">
       {/* Close (Cancel) Button */}
@@ -35,7 +37,7 @@ export default async function SignInPage(props: {
                 "use server";
                 try {
                   await signIn(provider.id, {
-                    redirectTo: props.searchParams?.callbackUrl ?? "",
+                    redirectTo: searchParams?.callbackUrl ?? "",
                   });
                 } catch (error) {
                   if (error instanceof AuthError) {

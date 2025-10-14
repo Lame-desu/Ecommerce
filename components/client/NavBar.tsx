@@ -10,7 +10,7 @@ import { useCart } from "./ContextProvider";
 import axios from "axios";
 import Image from "next/image";
 import { BsFillBagFill } from "react-icons/bs";
-import UserInfo from "../server/UserInfo";
+import UserInfo from "./UserInfo";
 
 function NavBar({
   handleOpenSearch,

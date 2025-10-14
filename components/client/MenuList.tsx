@@ -11,11 +11,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import ShowCategoriesList from "./ShwoCategoriesList";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import SelectLanguage from "./SelectLanguage";
 import ProfileIcon from "./ProfileIcon";
 import { IoPersonOutline } from "react-icons/io5";
-import UserInfo from "../server/UserInfo";
+import UserInfo from "./UserInfo";
 
 export default function MenuList({ session }: { session: any }) {
   const [categories, setCategories] = useState<
@@ -25,6 +25,15 @@ export default function MenuList({ session }: { session: any }) {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const pathName = usePathname();
   const route: string | undefined = pathName.split("/").at(-1);
+
+  const searchParams = useSearchParams();
+  const totalPath =
+    pathName + (searchParams ? `?${searchParams.toString()}` : "");
+
+  useEffect(() => {
+    setOpen(false);
+  }, [totalPath]);
+
   useEffect(() => {
     async function fetchCategories() {
       const res = await axios.get("https://dummyjson.com/products/categories");
@@ -47,11 +56,7 @@ export default function MenuList({ session }: { session: any }) {
           </div>
 
           <div>
-            <ShowCategoriesList
-              route={route}
-              categories={categories}
-              setOpen={setOpen}
-            />
+            <ShowCategoriesList route={route} categories={categories} />
           </div>
           <div className="bg-gray-200  mt-7">
             <div className="block md:hidden py-6 px-3 relative">

@@ -1,7 +1,7 @@
 "use client";
 
 import { IoPersonOutline } from "react-icons/io5";
-import UserInfo from "../server/UserInfo";
+import UserInfo from "./UserInfo";
 import { useState } from "react";
 
 function ProfileIcon({ session }: { session: any }) {
