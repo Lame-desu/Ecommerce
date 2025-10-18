@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Shaba Closet clone",
+  title: "Shaba Commerce",
   description: "Your trusted online fashion store",
 };
 

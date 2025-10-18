@@ -8,7 +8,7 @@ export default function PrivacyPolicyPage() {
 
       <section className="space-y-6 leading-relaxed text-[17px]">
         <p>
-          Welcome to <strong>Shaba Closet</strong> (“we,” “our,” “us”). Your
+          Welcome to <strong>Shaba Commerce</strong> (“we,” “our,” “us”). Your
           privacy is very important to us. This Privacy Policy explains how we
           collect, use, and protect your personal information when you visit our
           website and use our services.
@@ -100,11 +100,11 @@ export default function PrivacyPolicyPage() {
           If you have any questions or concerns about this Privacy Policy or how
           we handle your data, please contact us at:
         </p>
-        <p className="font-medium">📧 support@shabacloset.com</p>
+        <p className="font-medium">📧 support@shabacommerce.com</p>
       </section>
 
       <footer className="text-center text-sm text-gray-600 mt-16 border-t pt-6">
-        &copy; {new Date().getFullYear()} Shaba Closet. All rights reserved.
+        &copy; {new Date().getFullYear()} Shaba Commerce. All rights reserved.
       </footer>
     </main>
   );

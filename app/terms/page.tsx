@@ -7,7 +7,7 @@ export default function TermsOfService() {
         </h1>
 
         <p className="mb-6 text-gray-700">
-          Welcome to <strong>Shaba Closet</strong>. By accessing or using our
+          Welcome to <strong>Shaba Commerce</strong>. By accessing or using our
           website, you agree to comply with and be bound by these Terms of
           Service. Please read them carefully before using our services.
         </p>
@@ -66,18 +66,18 @@ export default function TermsOfService() {
           6. Intellectual Property
         </h2>
         <p className="text-gray-700 mb-6">
-          All content on <strong>Shaba Closet</strong>, including text, images,
-          logos, and graphics, is the property of Shaba Closet or its content
-          suppliers and is protected by copyright and trademark laws. You may
-          not reproduce, distribute, or use our content without prior written
-          permission.
+          All content on <strong>Shaba Commerce</strong>, including text,
+          images, logos, and graphics, is the property of Shaba Commerce or its
+          content suppliers and is protected by copyright and trademark laws.
+          You may not reproduce, distribute, or use our content without prior
+          written permission.
         </p>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4">
           7. Limitation of Liability
         </h2>
         <p className="text-gray-700 mb-6">
-          Shaba Closet is not liable for any direct, indirect, incidental, or
+          Shaba Commerce is not liable for any direct, indirect, incidental, or
           consequential damages resulting from your use of our website or
           services. Our total liability shall not exceed the amount paid by you
           for the product in question.
@@ -105,13 +105,13 @@ export default function TermsOfService() {
         </p>
 
         <div className="border-l-4 border-gray-500 pl-4 text-gray-700">
-          <p>Email: support@shabacloset.com</p>
+          <p>Email: support@shabaCommerce.com</p>
           <p>Phone: +251 900 000 000</p>
           <p>Address: Addis Ababa, Ethiopia</p>
         </div>
 
         <p className="text-gray-600 text-sm mt-10 text-center">
-          © {new Date().getFullYear()} Shaba Closet. All rights reserved.
+          © {new Date().getFullYear()} Shaba Commerce. All rights reserved.
         </p>
       </div>
     </main>

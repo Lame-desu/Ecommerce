@@ -25,7 +25,9 @@ export default async function SignInPage(props: {
       {/* Card */}
       <div className="w-full max-w-md border border-gray-300 rounded-xl shadow-sm p-10 text-center">
         {/* Brand / Title */}
-        <h1 className="text-4xl font-bold tracking-wide mb-2">Shaba Closet</h1>
+        <h1 className="text-4xl font-bold tracking-wide mb-2">
+          Shaba Commerce
+        </h1>
         <p className="text-gray-500 mb-8">Sign in to your account</p>
 
         {/* Provider Buttons */}
@@ -72,7 +74,7 @@ export default async function SignInPage(props: {
         {/* Terms */}
         <div className="mt-10 text-gray-500 text-sm">
           <p>
-            By continuing, you agree to Shaba Closet’s{" "}
+            By continuing, you agree to Shaba Commerce's{" "}
             <a href="#" className="underline hover:text-black">
               Terms of Service
             </a>{" "}

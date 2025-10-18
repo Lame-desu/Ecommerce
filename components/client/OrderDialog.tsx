@@ -80,7 +80,7 @@ function OrderDialog() {
 
           <p className="text-gray-600 mb-6">
             Thank you for shopping with{" "}
-            <span className="font-semibold">Shaba Closet</span>!
+            <span className="font-semibold">Shaba Commerce</span>!
             <br />
             Your order is being processed and will be on its way soon.
           </p>

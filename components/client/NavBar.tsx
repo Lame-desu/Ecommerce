@@ -93,7 +93,7 @@ function NavBar({
 
         <Link href="/">
           <h1 className="sm:text-3xl md:text-4xl font-semibold text-center text-nowrap ">
-            Shaba Closet
+            Shaba Commerce
           </h1>
         </Link>
         <div className="flex gap-5 items-center justify-end">

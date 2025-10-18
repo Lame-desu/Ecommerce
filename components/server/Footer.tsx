@@ -10,7 +10,7 @@ function Footer() {
           <SelectLanguage border={true} />
         </div>
         <p className="text-xs font-light">
-          © 2025, Shaba Closet Designed by Kinfolks
+          © 2025, Shaba Commerce Designed by Kinfolks
         </p>
         <Link href="/privacy-policy">
           <p className="text-xs font-light hover:underline">Privacy policy</p>
